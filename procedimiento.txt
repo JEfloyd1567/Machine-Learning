@@ -1,0 +1,12 @@
+Al inicio de decidio eliminar datos atipicos con el criterio del zscore, pero solo la decision
+de eliminar datos atipicos baja demasiado el puntaje del F1.
+
+Entonces la decision que se tomo fue normalizar la base de datos, con distintas librerias de sklearn. De
+esta manera se observo que no hubo ninguna diferencias al usar algun metodo en especifico, es decir, no cambia
+el puntaje F1.
+
+Al balanccear la base de datos se realizo de las siguientes formas:
+
+1. balancear con hiperparamteros de la regresion logistica, dandole mayor prioridad a la clase de menor tamaño.
+2. Eliminando registros de la clase mayoritaria.
+3. Agregar registros a la clase de menor tamaño.
